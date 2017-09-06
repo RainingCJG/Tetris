@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8" />
+		<title>俄罗斯方块</title><link rel="stylesheet" href="css/Tetris.css" />
+	</head>
+	<body>
+		<div class="container">
+			<!--游戏界面-->
+			<div id="game-interface"></div>
+			<!--游戏界面蒙版（用于游戏开始与结束说明）-->
+			<div class="game-interface-mask">
+				<!--游戏开始界面-->
+				<div class="paly">
+					<h3 class="game-title">Tetris Game</h3>
+					<ul>
+						<li model="start" class="start choosen">Start Play</li>
+						<!--<li model="single">Single Play</li>
+						<li model="double">Double Play</li>-->
+					</ul>
+				</div>
+				<!--游戏结束界面-->
+				<div class="gameover none">
+					<h3 class="game-title">Game Over</h3>
+					<div>TotalTime：<span class="totaltime">0</span> s</div>
+					<div>Score：<span class="lastmark">0</span> mark</div>
+					<span class="restart">Restart</span>
+					<span class="return">Return</span>
+				</div>
+			</div>
+			<!--记录下一个下落的方块及其游戏说明界面-->
+			<div id="record-interface">
+				<div class="displaysqur"></div>
+				<p class="play-time">用时：<span class="time">0</span> s</p>
+				<p class="record-mark">分数：<span class="mark">0</span> 分</p>
+				<div class="declare">游戏说明：<span class="explain">左移 —— ← ,</span><span class="explain">右移 —— → ,</span><span class="explain">变形(或选择游戏模式) —— ↑ ,</span ><span class="explain">下落(或选择游戏模式) —— ↓ ,</span><span class="explain">直接落到底部 —— space 。</span><span class="explain">确定游戏模式 —— enter ,</span ></div>
+				<div class="declare-mark">计分说明:<span class="explain">消一行计 10 分 ,</span><span class="explain">消两行计 30 分 ,</span><span class="explain">消三行计 60 分 ,</span><span class="explain">消四行计 100 分 。</span></div>
+			</div>
+		</div>
+		
+		<!--引入外部js文件-->
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+		<script type="text/javascript" src="js/render.js" ></script>
+		<script type="text/javascript" src="js/square.js" ></script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

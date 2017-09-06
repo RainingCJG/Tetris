@@ -1,0 +1,217 @@
+/********重置样式********/
+html,body,div,p,a,li,ul,ol,dl,dt,dd,input,textarea,select,img{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font: 12px/1.4286 "微软雅黑";
+	background-color: #eee;
+}
+
+li,ul{
+	list-style: none;
+}
+
+/********公共样式********/
+/*左浮动*/
+.fl{
+	float: left;
+}
+/*右浮动*/
+.fr{
+	float: right;
+}
+
+/*清除浮动*/
+.clearfix{
+	zoom: 1;
+}
+.clearfix:before,
+.clearfix:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+/*隐藏*/
+.none{
+	display: none;
+}
+
+/********页面布局********/
+.container{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	height: 500px;
+	margin-left: -300px;
+	margin-top: -250px;
+	background:url(../img/bg.jpg) no-repeat;
+	background-size: 100% 100%;
+}
+
+/*******游戏界面********/
+#game-interface{
+	position: relative;
+	top: 50px;
+	left: 50px;
+	width: 300px;
+	height: 400px;
+	background-color: #000;
+}
+/*方块样式*/
+.pane{
+	position: absolute;
+	width: 18px;
+	height: 18px;
+}
+
+.pane-border{
+	border: 1px outset #fff;
+}
+
+/*红色*/
+.red{
+	background-color: #ff0000;
+}
+/*黄色*/
+.yellow{
+	background-color: #FFFF00;
+}
+/*绿色*/
+.green{
+	background-color: #99FF00;
+}
+/*蓝色*/
+.blue{
+	background-color: #0066CC;
+}
+/*橙色*/
+.orange{
+	background-color: #FF9900;
+}
+/*紫色*/
+.pupple{
+	background-color: #990066;
+}
+/*粉红色*/
+.pink{
+	background-color: #FF99FF;
+}
+
+/********界面蒙版（游戏开始与结束）********/
+.game-interface-mask{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 300px;
+	height: 400px;
+	background-color: rgba(0,0,0,.9);
+	filter: alpha(opacity=90);/*IE*/
+}
+
+/*游戏开始结束界面*/
+.paly,.gameover{
+	width: 200px;
+	height: 200px;
+	margin: 100px auto;
+	text-align: center;
+	/*border: 1px solid #fff;*/
+	color: #FF0000;
+	font-weight: bolder;
+}
+
+/*游戏名称*/
+.game-title{
+	font-size: 30px;
+}
+
+/*开始游戏菜单*/
+.paly li{
+	text-align: left;
+	font-size: 20px;
+	text-indent: 50px;
+}
+
+/*选中游戏模式*/
+.choosen{
+	background: url(../img/hand.png) no-repeat 20px 5px;
+	background-size: 20px 15px;
+	
+}
+
+.gameover div{
+	font-size: 20px;
+}
+
+/*重新开始和返回主菜单按钮*/
+.restart,.return{
+	display: block;
+	width: 90px;
+	height: 36px;
+	margin-left: 60px;
+	margin-top: 20px;
+	line-height: 36px;
+	text-align: center;
+	background: rgba(255,255,255,.3);
+	filter: alpha(opacity=70);/*IE*/
+	font-size: 20px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.restart:hover,
+.return:hover{
+	background: rgba(255,255,255,.5);
+	filter: alpha(opacity=90);/*IE*/
+}
+
+/*掉落到底部颜色*/
+.gray{
+	background-color: #CCCC99;
+}
+
+/******下次下落的方块界面******/
+#record-interface{
+	position: absolute;
+	right: 0;
+	top: 50px;
+	height: 400px;
+}
+
+.displaysqur{
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 40px;
+	background-color: #000;
+}
+
+#record-interface p{
+	font-weight: bold;
+}
+
+#record-interface span{
+	color: #99FF00;
+}
+
+/*游戏说明*/
+.declare{
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+.declare-mark{
+	margin-top: 20px;
+	font-weight: bold;
+}
+
+#record-interface span.explain{
+	display: block;
+	text-indent: 2em;
+	color: #FF9900;
+}
+
+
